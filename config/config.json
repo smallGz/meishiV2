@@ -17,9 +17,9 @@
   },
   "production": {
     "username": "root",
-    "password": "99760ljg*zx1986",
+    "password": "99760ljg_0213",
     "database": "meishi",
-    "host": "172.19.16.11",
+    "host": "172.19.16.14",
     "dialect": "mysql",
     "timezone":"+08:00"
   }
