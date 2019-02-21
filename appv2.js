@@ -8,6 +8,7 @@ const KoaSession = require('koa-session');
 // const multer = require('koa-multer');
 const {UserModel} = require('./models');
 const Token = require('./utils/token.js');
+const configs = require('./config/config.json');
 
 
 //v2
@@ -80,5 +81,6 @@ router.use('/api/oa/user',oav2router.routes());
 
 app.use(router.routes());
 
-
-app.listen(8888);
+const env = process.env.NODE_ENV || 'development'
+const config = configs[env];
+app.listen(config.web.port);

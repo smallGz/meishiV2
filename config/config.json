@@ -5,7 +5,10 @@
     "database": "meishi_development",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "timezone":"+08:00"
+    "timezone":"+08:00",
+    "web":{
+      "port":8888
+    }
   },
   "test": {
     "username": "root",
@@ -21,6 +24,9 @@
     "database": "meishi",
     "host": "172.19.16.14",
     "dialect": "mysql",
-    "timezone":"+08:00"
+    "timezone":"+08:00",
+    "web":{
+      "port":80
+    }
   }
 }
