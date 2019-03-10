@@ -96,6 +96,7 @@ router.post('/login',async (ctx) =>{
     });
     let loginId = loginUser.get('id');
     if(!loginUser || md5(password) !== loginUser.get('password')){
+        console.log('用户不存在');
         return ctx.body = {
             code : 2,
             message : '用户名不存在或密码错误'

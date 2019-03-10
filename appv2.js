@@ -18,6 +18,7 @@ const oav2router = require('./routers/main/oauser.v2.js');
 
 const app = new Koa();
 
+
 //静态文件处理
 app.use(KoaStaticCache(__dirname + '/static',{
     root:__dirname + '/static',//与上面的第一个参数效果一致
@@ -74,10 +75,12 @@ app.use(async(ctx, next) => {
 
 //路由配置
 const router = new Router();
-
 router.use('/api/user',userv2router.routes());
 router.use('/api/index',indexv2router.routes());
 router.use('/api/oa/user',oav2router.routes());
+router.get('/',async (ctx) =>{
+    ctx.body =  await ctx.render('./index.html');
+})
 
 app.use(router.routes());
 
